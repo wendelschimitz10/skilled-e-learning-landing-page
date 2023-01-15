@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+
+:root {
+  --fonts-main: "Plus Jakarta Sans", sans-serif;
+  --colors-g-hover: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+body {
+  height: 120vh;
+  font-family: var(--fonts-main);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.btn--default {
+  width: 167px;
+  font-size: 1.125rem;
+  border-radius: 28px;
+  padding: 10px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+/* NAVBAR */
+.header__container {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.nav__container__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 55px;
+  /* background-color: rgb(72, 68, 62); */
+}
+.nav__button {
+  background-color: #13183f;
+  color: white;
+}
+.nav__button:hover {
+  background-color: #666ca3;
+}
+.nav__logo__image {
+  margin-left: -80px;
+}
+
+/* MAIN */
+/* SECTION START BANNER */
+.startBanner__container {
+  /* background-color: #666ca3; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.startBanner__content {
+  padding: 25px;
+  margin-left: 45px;
+  /* background-color: aqua; */
+}
+.startBanner__content h1 {
+  font-size: 3.5rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
+.startBanner__content p {
+  font-size: 1.125rem;
+  line-height: 1.556;
+  padding: 29px 0 40px;
+  color: #83869a;
+}
+.startBanner__btn {
+  background-color: #f74780;
+  color: white;
+}
+.startBanner__btn:hover {
+  background-color: #ffa7c3;
+}
+.startBanner__image__container {
+  max-width: 700px;
+}
+.startBanner__image {
+  position: relative;
+  top: -100px;
+  left: 85px;
+  width: 820px;
+}
+
+/* COURSES CARDS */
+.courses {
+  padding: 50px;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+}
+.courses__card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px 30px;
+  margin-bottom: 50px;
+}
+.courses__card__content {
+  max-width: 350px;
+  min-height: 322px;
+  padding: 64px 32px 40px;
+  border-radius: 15px;
+  background-color: white;
+}
+.courses__card__content h3 {
+  font-size: 2.3rem;
+  color: black;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.courses__card__content p {
+  color: #83869a;
+}
+.courses__card__content a {
+  color: #f74780;
+  transition: .2s ease-in;
+}
+.courses__card__content a:hover {
+  color: var(--colors-g-hover);
+}
+.card__image--icon {
+  position: relative;
+  top: -190px;
+  left: 140px;
+}
+.card--heading {
+  background-image: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  font-size: 1.6rem!important;
+  line-height: 1.25;
+  color: white;
+}
+
+/* FOOTER */
+.footer{
+  background-color: #13183f;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer button {
+  background-color: #f74780;
+  color: white;
+}
+.footer button:hover {
+  background-color: #ffa7c3;
+}
+
+/* RESPONSIVE START BANNER*/
+@media only screen and (max-width: 1050px) {
+  .startBanner__image__container {
+    max-width: 500px;
+  }
+  .startBanner__image {
+    top: -100px;
+    left: -67px;
+    width: 760px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .startBanner__content {
+    padding: 19px;
+    margin-left: 12px;
+  }
+  .startBanner__content h1 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    font-weight: 800;
+  }
+  .startBanner__content p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .startBanner__image {
+    top: -83px;
+    left: 0px;
+    width: 685px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .startBanner__container {
+    flex-direction: column;
+  }
+  .startBanner__image__container {
+    max-width: 700px;
+  }
+  .startBanner__image {
+    width: 100%;
+  }
+  .startBanner__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 120px 0px 80px 0px;
+  }
+  .startBanner__content h1,
+  .startBanner__content p {
+    text-align: center;
+  }
+}
+/*  */
+/* RESPONSIVE FOOTER */
+@media only screen and (max-width: 448px) {
+  .card__image--icon {
+    top: -230px;
+    left: 85px;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .card__image--icon {
+    top: -250px;
+    left: 40px;
+  }
+}
+/*  */
